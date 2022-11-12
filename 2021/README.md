@@ -6,6 +6,4 @@ _Language for all solutions: go_
 
 ## Solutions
 
-### Day 1
-
-- [Problem 1](./day-01-1/main.go)
+- [Day 1](./day-01/problem.md)

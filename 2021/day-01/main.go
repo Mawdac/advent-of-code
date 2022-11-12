@@ -15,18 +15,16 @@ func main() {
 }
 
 func measureSweeps(sweeps []int) int {
-	var previous, increases int
+	var increases int
 
 	for i, v := range sweeps {
 		if i == 0 {
 			fmt.Printf("Skipping first iteration %d\n", v)
-			previous = v
 			continue
-		} else if v > previous {
+		} else if v > sweeps[i-1] {
 			increases++
 		}
-		fmt.Printf("Increases: %d - Previous: %d - Current %d\n", increases, previous, v)
-		previous = v
+		fmt.Printf("Increases: %d - Previous: %d - Current %d\n", increases, sweeps[i-1], v)
 	}
 
 	return increases

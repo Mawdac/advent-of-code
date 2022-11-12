@@ -1,9 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"log"
+	"os"
+	"strconv"
+)
 
 func main() {
-	input := []int{199, 200, 208, 210, 200, 207, 240, 269, 260, 263}
+	input := readInput("input.txt")
 
 	fmt.Printf("Total increases on sweep depth: %d\n", measureSweeps(input))
 }
@@ -24,4 +30,27 @@ func measureSweeps(sweeps []int) int {
 	}
 
 	return increases
+}
+
+func readInput(file string) []int {
+	var values []int
+
+	f, err := os.Open(file)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	defer f.Close()
+
+	scanner := bufio.NewScanner(f)
+
+	for scanner.Scan() {
+		x, err := strconv.Atoi(scanner.Text())
+		if err != nil {
+			log.Fatal(err)
+		}
+		values = append(values, x)
+	}
+
+	return values
 }

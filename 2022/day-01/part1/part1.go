@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	file := "input.txt"
+	file := "../input.txt"
 	fmt.Printf("Parsing %s\n", file)
 
 	biggestChonker := parseInput(file)

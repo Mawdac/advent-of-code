@@ -1,3 +1,4 @@
+
 # Day 1: Calorie Counting
 
 Santa's reindeer typically eat regular reindeer food, but they need a lot of

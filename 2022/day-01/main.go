@@ -28,7 +28,7 @@ func main() {
 		}
 		if os.Args[2] == "part1" || os.Args[2] == "all" {
 			fmt.Println("\n~ Part 1 Solution ~")
-			fmt.Printf("The elf with the most calories has %v\n", packs[0])
+			fmt.Printf("The elf with the most calories has %v\n", part1(packs))
 		}
 		if os.Args[2] == "part2" || os.Args[2] == "all" {
 			top3 := part2(packs)

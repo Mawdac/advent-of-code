@@ -282,23 +282,3 @@ func Test_addColorCount(t *testing.T) {
 		})
 	}
 }
-
-func Test_trim(t *testing.T) {
-	type args struct {
-		s string
-	}
-	tests := []struct {
-		name string
-		args args
-		want string
-	}{
-		// TODO: Add test cases.
-	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := trim(tt.args.s); got != tt.want {
-				t.Errorf("trim() = %v, want %v", got, tt.want)
-			}
-		})
-	}
-}

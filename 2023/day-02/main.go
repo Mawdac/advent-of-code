@@ -36,7 +36,7 @@ func main() {
 		}
 		if os.Args[2] == "part2" || os.Args[2] == "all" {
 			p2 := part2(games)
-			fmt.Println("\n~ Part 2 Solution ~")
+			fmt.Println("~ Part 2 Solution ~")
 			fmt.Printf("The solution for part 2 is %v\n", p2)
 		}
 	} else {

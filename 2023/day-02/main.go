@@ -17,6 +17,10 @@ type game struct {
 	sets []set
 }
 
+func (s set) addTwoNumbers(a int, b int) int {
+	return a + b
+}
+
 func main() {
 	var games []game
 	if len(os.Args) > 1 {

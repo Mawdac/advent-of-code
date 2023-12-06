@@ -10,8 +10,8 @@ import (
 
 type entry struct {
 	minMax   []int
-	letter   rune
 	password []rune
+	letter   rune
 }
 
 func main() {

@@ -24,7 +24,7 @@ func part1(values [][]int) int {
 	sumOfValues := 0
 
 	for i, v := range values {
-		// fmt.Printf("Find the next value for %v...\n", v)
+		fmt.Printf("Find the next value for %v...\n", v)
 		newValue := findNextDifference(v) + v[len(v)-1]
 		sumOfValues += newValue
 		fmt.Printf("Next value for %v is %v\n", i, newValue)
@@ -41,7 +41,7 @@ func findNextDifference(values []int) int {
 
 	fmt.Printf("Differences for %v: %v\n", values, differences)
 
-	if checkForEquality(differences) {
+	if checkForZeros(differences) {
 		return differences[0]
 	} else {
 		return findNextDifference(differences) + differences[len(differences)-1]
@@ -55,9 +55,9 @@ func absDiffInt(x, y int) int {
 	return x - y
 }
 
-func checkForEquality(values []int) bool {
-	for i := 0; i < len(values)-1; i++ {
-		if values[i] != values[i+1] {
+func checkForZeros(values []int) bool {
+	for i := 0; i < len(values); i++ {
+		if values[i] != 0 {
 			return false
 		}
 	}
